@@ -3,6 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+var myCenter=new google.maps.LatLng(59.9386382,30.3230122);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:18,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("map"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
   </head>
   <body>
     <!--============================
@@ -277,14 +301,13 @@
           <h1>КОНТАКТЫ</h1>
           <p>Вы можете забрать товар сами, <br>
           заехав в наш офис:</p>
-          <div id="map"></div>
+          <div id="map" style="width:300px;height:158px"></div>
           <a href="#" class="btn btn-main">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </main>
 
     <!--====  End of MAIN  ====-->
-
 
   </body>
 </html>
