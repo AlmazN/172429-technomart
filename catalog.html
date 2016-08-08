@@ -5,10 +5,6 @@
   <title>Catalog</title>
 </head>
 <body>
-  <!--============================
-  =            HEADER            =
-  =============================-->
-
   <header class="main-header">
     <div class="container">
       <section class="order-section">
@@ -80,7 +76,57 @@
     </div>
   </header>
 
-  <!--====  End of HEADER  ====-->
+  <main class="container">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Главная</a>
+      </li>
+      <li>
+        <a href="#">Каталог</a>
+      </li>
+      <li>
+        <a href="#">Инструмент</a>
+      </li>
+      <li>
+        Перфораторы
+      </li>
+    </ul>
 
+    <h1 class='title-30'>Перфораторы</h1>
+
+    <h3 class="title-13">Фильтр:</h3>
+
+    <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
+      <div class="catalog-filter-range">
+        <h2>Цена:</h2>
+        <div class="slider-range" id="slider-range"></div>
+        <input type="number" id="min-price" min="0">
+        <input type="number" id="max-price" min="0">
+      </div>
+      <hr>
+      <div class="catalog-filter-checbox">
+        <h2>Производители:</h2>
+        <input type="checkbox" id="bosch" name="bosch">
+        <label for="bosch">Bosch</label>
+        <input type="checkbox" id="interskol" name="interskol">
+        <label for="interskol">Интерскол</label>
+        <input type="checkbox" id="makita" name="makita">
+        <label for="makita">Makita</label>
+        <input type="checkbox" id="dewalt" name="dewalt">
+        <label for="dewalt">DeWalt</label>
+        <input type="checkbox" id="hitachi" name="hitachi">
+        <label for="hitachi">Hitachi</label>
+      </div>
+      <hr>
+      <div class="catalog-filter-radio">
+        <h2>Питание:</h2>
+        <input type="radio" name="power-type" id="accumulator" value="accumulator">
+        <label for="accumulator">Аккумуляторные</label>
+        <input type="radio" name="power-type" id="socket" value="socket">
+        <label for="socket">Сетевые</label>
+      </div>
+      <button class="btn" type="submit">Показать</button>
+    </form>
+  </main>
 </body>
 </html>
