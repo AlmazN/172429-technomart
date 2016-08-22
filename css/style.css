@@ -46,8 +46,610 @@ h2 {
   font-family: "PT Sans Bold";
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .map {
   width: 300px;
   height: 158px;
   background: #999;
 }
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.order-section > * > * {
+  display: inline-block;
+}
+
+.order-section {
+  background: #293449;
+  color: #fff;
+}
+
+.logo {
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+  background-color: #ee3643;
+  font-family: Cuprum;
+  color: #fff;
+  box-shadow: 0 4px #b52933;
+}
+
+.header-logo {
+  padding-top: 11px;
+  padding-bottom: 9px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.order-section .logo {
+  margin-right: 15px;
+}
+
+.search {
+  margin-right: 25px;
+}
+
+.tab {
+  margin-right: 30px;
+}
+
+.order-section .container > a {
+  float: right;
+  width: 150px;
+  text-align: center;
+}
+
+.user-section > * > * {
+  display: inline-block;
+}
+
+.user-section {
+  padding-top: 45px;
+  padding-bottom: 65px;
+  background: #f1f5f7;
+}
+
+.user-section > * > p {
+  margin-left: 53px;
+  margin-right: 71px;
+}
+
+.contact-info {
+  width: 270px;
+  margin-right: 67px;
+}
+
+.contact-info span:first-child {
+  display: block;
+  text-align: center;
+}
+
+.user {
+  width: 281px;
+}
+
+.btn-user {
+  display: inline-block;
+  background: #ffffff;
+  padding: 12px 25px;
+}
+
+.btn-user:first-child {
+  float: left;
+}
+
+.btn-user:last-child {
+  float: right;
+}
+
+.main-navigation {
+  display: block;
+  margin-top: 40px;
+}
+
+.main-navigation ul li {
+  display: inline-block;
+  padding: 18px 6px 22px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.main-header {
+  margin-bottom: 59px;
+}
+
+.groups-item {
+  box-sizing: border-box;
+  width: 300px;
+  height: 123px;
+  padding: 22px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.groups-item:last-child {
+  margin-bottom: 0;
+}
+
+.groups-item:first-child {
+  margin-left: 0;
+}
+
+.groups-item-material {
+  background-color: #f6b22d;
+  float: left;
+}
+
+.groups-item-tool {
+  background-color: #4aafde;
+  float: left;
+}
+
+.groups-item-technique {
+  background-color: #cc79d1;
+  float: right;
+}
+
+.groups-item-discount {
+  background-color: #85d179;
+  float: right;
+}
+
+.groups-item-deliver {
+  background-color: #f6b22d;
+  float: right;
+}
+
+.groups-item > * {
+  display: block;
+}
+
+.groups-item a {
+  box-sizing: border-box;
+  width: 136px;
+  height: 38px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.slider {
+  float: left;
+}
+
+.slider-slides {
+  width: 200%;
+}
+
+.slider-slides article {
+  float: left;
+  position: relative;
+}
+
+.slider-inner {
+  width: 620px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider input {
+  display: none;
+}
+
+article .slider-title {
+  position: absolute;
+  padding-top: 22px;
+  padding-left: 25px;
+}
+
+article .slider-title div:first-child {
+  color: #fff;
+  font-size: 36px;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+
+article .slider-title div:last-child {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.slider-btn-prev {
+  position: absolute;
+  left: 25px;
+  top: 114px;
+}
+
+.slider-btn-next {
+  position: absolute;
+  right: 25px;
+  top: 114px;
+}
+
+.btn-main {
+  text-align: center;
+  padding: 12px;
+  background-color: #ee3643;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-family: Cuprum;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.slider-btn-main {
+  position: absolute;
+  display: block;
+  width: 195px;
+  bottom: 22px;
+  left: 25px;
+}
+
+.popular {
+  margin-top: 53px;
+}
+
+.popular-title {
+  box-sizing: border-box;
+  width: 940px;
+  padding: 25px 24px 26px 30px;
+  background-color: #f7f3ec;
+  margin-bottom: 20px;
+}
+
+.popular-btn-main {
+  width: 253px;
+  float: right;
+}
+
+.popular-title h1 {
+  float: left;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.popular-goods {
+  font-size: 0;
+  margin-bottom: 21px;
+}
+
+.catalog-item {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #e5e5e5;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.popular-goods .catalog-item {
+  margin-bottom: 0;
+}
+
+.popular-manufacturer .catalog-item:nth-child(n+3) {
+  margin-bottom: 0;
+}
+
+.popular-goods .catalog-item:last-child {
+  margin-right: 0;
+}
+
+.catalog-item figure {
+  margin: 0;
+}
+
+.catalog-item figure img {
+  margin-bottom: 13px;
+}
+
+.catalog-item figcaption {
+  font-family: "PT Sans Bold";
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+
+.catalog-item button {
+  display: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.catalog-item > span {
+  display: block;
+  font-family: "PT Sans Bold";
+  font-size: 17px;
+  line-height: 18px;
+  color: #999;
+  margin-bottom: 11px;
+}
+
+.arrow-btn-main {
+  width: 121px;
+  font-family: "PT Sans Bold";
+  font-size: 17px;
+  line-height: 18px;
+  margin-bottom: 21px;
+}
+
+.popular-manufacturer {
+  font-size: 0;
+}
+
+.popular-manufacturer .catalog-item {
+  width: 220px;
+  height: 145px;
+  position: relative;
+}
+
+.popular-manufacturer .catalog-item img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0; /*для центровки изображения внутри дива*/
+  bottom: 0;
+  left: 0;
+}
+
+.popular-manufacturer .catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.popular {
+  padding-bottom: 85px;
+}
+
+/*Начало стилей для блока Сервисы*/
+
+.services h1,
+.services ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services {
+  padding-top: 64px;
+  background-color: #f2f6f8;
+}
+
+.services h1 {
+  text-transform: uppercase;
+}
+
+.services .container > p {
+  margin-top: 32px;
+  margin-bottom: 73px;
+}
+
+#tabs-1, #tabs-2 {
+  display: none;
+}
+
+#tabs ul, .tab-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#tabs ul {
+  margin-right: 80px;
+}
+
+#tabs ul a {
+  box-sizing: border-box;
+  display: block;
+  font-size: 21px;
+  line-height: 30px;
+  font-family: "Cuprum Bold";
+  color: #ffffff;
+  background-color: #32425c;
+  padding: 20px 0 21px 22px;
+  width: 240px;
+}
+
+#tabs li.active-tab a {
+  background: #ffffff;
+  color: #32425c;
+}
+
+div[id^="tabs-"] h1 {
+  color: #32425c;
+}
+
+div[id^="tabs-"] p {
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 32px;
+}
+
+div[id^="tabs-"] {
+  width: 615px;
+  height: 284px;
+}
+
+#tabs-3 p {
+  margin-bottom: 30px;
+}
+
+.credit-btn-main {
+  width: 195px;
+}
+
+#tabs-1 {
+  background: url(../img/tabs-1-bg.png) 100% 50% no-repeat;
+}
+
+#tabs-2 {
+  background: url(../img/tabs-2-bg.png) 100% 50% no-repeat;
+}
+
+#tabs-3 {
+  background: url(../img/tabs-3-bg.png) 100% 50% no-repeat;
+}
+/*Конец стилей для блока Сервисы*/
+
+/*Начало стилей для блока about-company*/
+.about-company h1 {
+  margin: 0;
+}
+
+.about-company {
+  padding: 82px 0 86px;
+}
+
+.about-company-description {
+  float: left;
+  width: 560px;
+}
+
+.about-company-contacts {
+  float: right;
+}
+
+.about-company-description p {
+  margin-top: 36px;
+}
+
+.about-company-description p:last-child {
+  margin-bottom: 22px;
+}
+
+.about-company-description ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 36px;
+}
+
+.about-company-description ul li {
+  padding-left: 36px;
+  background: url(../img/list-style-image-about-company.gif) 0% 50% no-repeat;
+}
+
+.about-company-description ul a {
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000;
+}
+
+.company-btn-main {
+  width: 220px;
+}
+
+.about-company-contacts p {
+  margin-top: 33px;
+  margin-bottom: 37px;
+}
+
+.map {
+  margin-bottom: 40px;
+}
+
+.contacts-btn-main {
+  display: block;
+}
+/*Конец стилей для блока about-company*/
+
+/*Начало стилей для footer*/
+
+/*Начало стилей для блока footer-menu*/
+.footer-menu {
+  background-color: #32425c;
+  color: #fff;
+  padding-bottom: 53px;
+}
+
+.footer-logo {
+  font-size: 30px;
+  line-height: 30px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.footer-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.footer-menu ul li {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Cuprum;
+}
+
+.footer-menu ul a {
+  color: #fff;
+  padding: 0 30px;
+}
+
+.footer-menu ul li:last-child a {
+  padding-right: 0;
+}
+
+.footer-menu .container:first-child {
+  position: relative; /* Экспреминет по заданию списку footer-menu-main нужной позиции*/
+  margin-bottom: 35px;
+}
+
+.footer-menu-main {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.footer-menu p {
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: 3px;
+  width: 380px;
+  float: left;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-menu-group {
+  float: right;
+}
+
+.footer-menu-group ul a {
+  color: #ffd180;
+}
+/*Конец стилей для блока footer-menu*/
+
+/*Конец стилей для footer*/
+
+.container {
+  box-shadow: 0 0 0 3px #ff422d;
+}
+
