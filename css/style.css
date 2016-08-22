@@ -328,6 +328,7 @@ article .slider-title div:last-child {
   float: left;
   margin: 0;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
 .popular-goods {
@@ -387,6 +388,7 @@ article .slider-title div:last-child {
   line-height: 18px;
   color: #999;
   margin-bottom: 11px;
+  min-height: 18px;
 }
 
 .arrow-btn-main {
@@ -533,7 +535,11 @@ div[id^="tabs-"] {
 }
 
 .about-company-description p {
-  margin-top: 36px;
+  margin-top: 32px;
+}
+
+.about-company-description p:last-of-type {
+  margin-top: 25px;
 }
 
 .about-company-description p:last-child {
@@ -549,7 +555,19 @@ div[id^="tabs-"] {
 
 .about-company-description ul li {
   padding-left: 36px;
-  background: url(../img/list-style-image-about-company.gif) 0% 50% no-repeat;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.about-company-description ul li::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
+  top: 41%;
+  left: 0;
 }
 
 .about-company-description ul a {
@@ -617,15 +635,12 @@ div[id^="tabs-"] {
 }
 
 .footer-menu .container:first-child {
-  position: relative; /* Экспреминет по заданию списку footer-menu-main нужной позиции*/
   margin-bottom: 35px;
 }
 
 .footer-menu-main {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  float: right;
+  margin-top: 43px;
 }
 
 .footer-menu p {
