@@ -8,47 +8,44 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="container">
       <section class="order-section">
-        <span class="title-24">Техномарт</span>
+        <div class="container">
+          <a href="#" class="logo header-logo uppercase">Техномарт</a>
+          <form class="search" action="https://echo.htmlacademy.ru" method="get">
+            <label for="search-field">Поиск:</label>
+            <input type="text" name="search" id="search-field" placeholder="Поиск:">
+            <button><span class="icon-search"></span></button>
+          </form>
 
-        <form class="search" action="https://echo.htmlacademy.ru" method="get">
-          <button type="submit">Поиск</button>
-          <label for="search-field">Поиск:</label>
-          <input type="text" name="search" id="search-field" placeholder="Поиск:">
-        </form>
+          <div class="tab">
+            <a href="#">Закладки:<span class="tab-counter">0</span></a>
+          </div>
 
-        <div class="tab">
-          <span>Закладки:</span>
-          <div class="tab-counter">0</div>
+          <div class="basket counter-active">
+            <a>Корзина:<span class="basket-counter">10</span></a>
+          </div>
+
+          <a href="#" class="order-btn">Оформить заказ</a>
         </div>
+        </section>
 
-        <div class="basket red-bg">
-          <span>Корзина:</span>
-          <div class="basket-counter">10</div>
-        </div>
-
-        <a href="#">Оформить заказ</a>
-      </section>
-
-      <section class="user-section">
+        <section class="user-section">
+        <div class="container">
           <p>Интернет-магазин<br>
           строительных материалов<br>
           и инструментов для ремонта</p>
 
-          <div class="contanct-info">
+          <div class="contact-info">
             <span>+7 (812) 555-05-55</span>
             <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </div>
 
           <div class="user">
-            <span class="user-index">
-              Равшан Джамшутович
-            </span>
-            <a href="#">Мои заказы</a>
-            <a href="#">Личный Кабинет</a>
+            <a class="btn-user btn-user-main" href="#">Равшан Джамшутович</a>
+            <a class="user-link" href="#">Мои заказы</a>
+            <span class="dot"></span>
+            <a class="user-link" href="#">Личный кабинет</a>
           </div>
-        </section>
 
         <nav class="main-navigation">
           <ul>
@@ -70,18 +67,20 @@
             <li>
               <a href="#">Доставка</a>
             </li>
-             <li>
+            <li>
               <a href="#">Контакты</a>
             </li>
           </ul>
           </nav>
-    </div>
+          </div>
+          </section>
   </header>
 
-  <main class="container">
-    <ul class="breadcrumb">
+  <main>
+  <div class="container">
+    <ul class="breadcrumbs uppercase">
       <li>
-        <a href="#">Главная</a>
+        <a href="#"><span class="icon-home"></span>Главная</a>
       </li>
       <li>
         <a href="#">Каталог</a>
@@ -94,38 +93,41 @@
       </li>
     </ul>
 
-    <h1>Перфораторы</h1>
+    <div class="popular-title-catalog">
+      <h1 class="uppercase">Перфораторы</h1>
+    </div>
 
-    <div class="catalog-header">
+    <div class="catalog-header uppercase">
       <h3>Фильтр:</h3>
     </div>
 
     <div class="catalog-header">
-      <ul>
+      <ul class="uppercase">
         <li><h3>Сортировка:</h3></li>
-        <li>По цене</li>
-        <li>По типу</li>
-        <li>По функионалу</li>
-        <li>По возрастанию</li>
-        <li>По убыванию</li>
+        <li><a class="active-sorting" href="#">По цене</a></li>
+        <li><a href="#">По типу</a></li>
+        <li><a href="#">По функционалу</a></li>
+        <li>По возрастанию<a class="active-sorting" href="#"><span class="icon-up-dir"></span></a></li>
+        <li>По убыванию<a href="#"><span class="icon-down-dir"></span></a></li>
       </ul>
     </div>
 
     <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
       <div class="catalog-filter-range">
-        <h2>Цена:</h2>
+        <h2 class="uppercase">Цена:</h2>
         <div class="slider-range" id="slider-range"></div>
-        <input type="number" id="min-price" min="0">
-        <input type="number" id="max-price" min="0">
+        <input type="text" id="min-price" min="0" value="0">
+        <span>&mdash;</span>
+        <input type="text" id="max-price" min="0" value="30000">
       </div>
       <hr>
       <div class="catalog-filter-checbox">
-        <h2>Производители:</h2>
-        <input type="checkbox" id="bosch" name="bosch">
+        <h2 class="uppercase">Производители:</h2>
+        <input type="checkbox" id="bosch" name="bosch" checked>
         <label for="bosch">Bosch</label>
         <input type="checkbox" id="interskol" name="interskol">
         <label for="interskol">Интерскол</label>
-        <input type="checkbox" id="makita" name="makita">
+        <input type="checkbox" id="makita" name="makita" checked>
         <label for="makita">Makita</label>
         <input type="checkbox" id="dewalt" name="dewalt">
         <label for="dewalt">DeWalt</label>
@@ -134,8 +136,8 @@
       </div>
       <hr>
       <div class="catalog-filter-radio">
-        <h2>Питание:</h2>
-        <input type="radio" name="power-type" id="accumulator" value="accumulator">
+        <h2 class="uppercase">Питание:</h2>
+        <input type="radio" name="power-type" id="accumulator" value="accumulator" checked>
         <label for="accumulator">Аккумуляторные</label>
         <input type="radio" name="power-type" id="socket" value="socket">
         <label for="socket">Сетевые</label>
@@ -153,7 +155,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through">22500 р.</span>
-        <a href="#" class="btn btn-arrow">15500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">15500 р.</a>
       </article>
       <article class="catalog-item">
         <figure>
@@ -164,7 +166,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through">30500 р.</span>
-        <a href="#" class="btn btn-arrow">25500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">25500 р.</a>
       </article>
       <article class="catalog-item new">
         <figure>
@@ -175,7 +177,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through"></span>
-        <a href="#" class="btn btn-arrow">12500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">12500 р.</a>
       </article>
       <article class="catalog-item">
         <figure>
@@ -186,7 +188,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through">22500 р.</span>
-        <a href="#" class="btn btn-arrow">15500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">15500 р.</a>
       </article>
       <article class="catalog-item new">
         <figure>
@@ -197,7 +199,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through">30500 р.</span>
-        <a href="#" class="btn btn-arrow">25500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">25500 р.</a>
       </article>
       <article class="catalog-item">
         <figure>
@@ -208,7 +210,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through"></span>
-        <a href="#" class="btn btn-arrow">12500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">12500 р.</a>
       </article>
       <article class="catalog-item new">
         <figure>
@@ -219,7 +221,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through">22500 р.</span>
-        <a href="#" class="btn btn-arrow">15500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">15500 р.</a>
       </article>
       <article class="catalog-item">
         <figure>
@@ -230,7 +232,7 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through">30500 р.</span>
-        <a href="#" class="btn btn-arrow">25500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">25500 р.</a>
       </article>
       <article class="catalog-item">
         <figure>
@@ -241,29 +243,29 @@
         <button class="btn btn-buy">Купить</button>
         <button class="btn btn-tab">В закладки</button>
         <span class="line-through"></span>
-        <a href="#" class="btn btn-arrow">12500 р.</a>
+        <a href="#" class="btn-main arrow-btn-main">12500 р.</a>
       </article>
-    </div>
 
-    <div class="paginator">
-      <a href="#">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">Следующая</a>
+      <div class="paginator">
+        <a class="active-page" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a class="paginator-btn-next" href="#">Следующая</a>
+      </div>
     </div>
-
+    </div>
     <section class="item-description">
-      <h1>Пара слов о перфораторах</h1>
-      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
-      Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+      <div class="container">
+        <h1 class="uppercase">Пара слов о перфораторах</h1>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+      </div>
     </section>
-
-    <section class="footer-menu">
-        <div class="adress">
-        <h1>ТЕХНОМАРТ</h1>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-        +7 (812) 555-05-55</p>
-        </div>
+    </main>
+    <footer class="main-footer">
+      <section class="footer-menu">
+        <div class="container clearfix">
+        <span class="logo footer-logo uppercase">Техномарт</span>
         <div class="footer-menu-main">
           <ul>
             <li>
@@ -283,6 +285,10 @@
             </li>
           </ul>
         </div>
+        </div>
+        <div class="container clearfix">
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        +7 (812) 555-05-55</p>
         <div class="footer-menu-group">
           <ul>
             <li>
@@ -299,10 +305,9 @@
             </li>
           </ul>
         </div>
+        </div>
       </section>
-    </main>
-
-    <footer class="main-footer">
+      <section class="footer-general">
       <div class="container">
         <section class="footer-copyrights">
           <p>© 2010–2016 Компания «Техномарт» <br>
@@ -310,9 +315,9 @@
         </section>
 
         <section class="footer-social">
-          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          <a class="social-btn" href="#">Вконтакте<span class="icon-vk"></span></a>
+          <a class="social-btn" href="#">Facebook<span class="icon-facebook"></span></a>
+          <a class="social-btn" href="#">Instagramm<span class="icon-instagramm"></span></a>
         </section>
 
         <section class="footer-feedback">
@@ -321,10 +326,11 @@
         </section>
 
         <section class="footer-dev">
-          <p>Разработано -</p>
+          <p>Разработано <span>&mdash;</span></p>
           <a class="btn" href="https://htmlacademy.ru">htmlacademy.ru</a>
         </section>
       </div>
+      </section>
     </footer>
 </body>
 </html>
