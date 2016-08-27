@@ -10,24 +10,22 @@
     <header class="main-header">
         <section class="order-section">
         <div class="container">
-          <span class="logo header-logo uppercase">Техномарт</span>
+          <a href="#" class="logo header-logo uppercase">Техномарт</a>
           <form class="search" action="https://echo.htmlacademy.ru" method="get">
-            <button type="submit">П</button>
             <label for="search-field">Поиск:</label>
             <input type="text" name="search" id="search-field" placeholder="Поиск:">
+            <button type="submit"><span class="icon-search"></span></button>
           </form>
 
           <div class="tab">
-            <span>Закладки:</span>
-            <span class="tab-counter">0</span>
+            <a href="#">Закладки:<span class="tab-counter">0</span></a>
           </div>
 
-          <div class="basket">
-            <span>Корзина:</span>
-            <span class="basket-counter">0</span>
+          <div class="basket counter-active">
+            <a href="#">Корзина:<span class="basket-counter">10</span></a>
           </div>
 
-          <a href="#">Оформить заказ</a>
+          <a href="#" class="order-btn">Оформить заказ</a>
         </div>
         </section>
 
@@ -43,8 +41,8 @@
           </div>
 
           <div class="user">
-            <a class="btn btn-user" href="#">Войти</a>
-            <a class="btn btn-user" href="#">Регистрация</a>
+            <a class="btn-user btn-user-enter" href="#">Войти</a>
+            <a class="btn-user btn-user-reg" href="#">Регистрация</a>
           </div>
 
         <nav class="main-navigation">
@@ -67,7 +65,7 @@
             <li>
               <a href="#">Доставка</a>
             </li>
-             <li>
+            <li>
               <a href="#">Контакты</a>
             </li>
           </ul>
@@ -286,7 +284,7 @@
     <footer class="main-footer">
       <section class="footer-menu">
         <div class="container clearfix">
-        <span class="logo footer-logo">Техномарт</span>
+        <span class="logo footer-logo uppercase">Техномарт</span>
         <div class="footer-menu-main">
           <ul>
             <li>
@@ -328,7 +326,7 @@
         </div>
         </div>
       </section>
-
+      <section class="footer-general">
       <div class="container">
         <section class="footer-copyrights">
           <p>© 2010–2016 Компания «Техномарт» <br>
@@ -336,9 +334,9 @@
         </section>
 
         <section class="footer-social">
-          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          <a class="social-btn" href="#">Вконтакте<span class="icon-vk"></span></a>
+          <a class="social-btn" href="#">Facebook<span class="icon-facebook"></span></a>
+          <a class="social-btn" href="#">Instagramm<span class="icon-instagramm"></span></a>
         </section>
 
         <section class="footer-feedback">
@@ -347,10 +345,11 @@
         </section>
 
         <section class="footer-dev">
-          <p>Разработано -</p>
+          <p>Разработано <span>&mdash;</span></p>
           <a class="btn" href="https://htmlacademy.ru">htmlacademy.ru</a>
         </section>
       </div>
+      </section>
     </footer>
   <script src="http://maps.googleapis.com/maps/api/js"></script>
   <script src="js/script.js"></script>
