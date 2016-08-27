@@ -318,7 +318,7 @@ body a {
 
 .user-section {
   padding-top: 46px;
-  padding-bottom: 65px;
+  padding-bottom: 73px;
   background: #f1f5f7;
   font-size: 0;
   font-family: Cuprum;
@@ -587,7 +587,7 @@ ul.breadcrumbs li:nth-child(4)::before {
 }
 
 .main-header {
-  margin-bottom: 24px;
+  margin-bottom: 60px;
 }
 /*начало стилей для блока groups*/
 .groups-item {
@@ -674,6 +674,7 @@ ul.breadcrumbs li:nth-child(4)::before {
 
 .slider {
   float: left;
+  position: relative;
 }
 
 .slider-slides {
@@ -695,35 +696,90 @@ ul.breadcrumbs li:nth-child(4)::before {
   display: none;
 }
 
+.slider label::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.slider input[id="btn-1"] + label::before {
+  bottom: 43px;
+  left: 295px;
+}
+
+.slider input[id="btn-2"] + label::before {
+  bottom: 43px;
+  left: 315px;
+}
+
+.slider input:checked + label::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #ee3643;
+  z-index: 1;
+}
+
+.slider input[id="btn-1"]:checked + label::after {
+  bottom: 45px;
+  left: 297px;
+}
+
+.slider input[id="btn-2"]:checked + label::after {
+  bottom: 45px;
+  left: 317px;
+}
+
 article .slider-title {
   position: absolute;
-  padding-top: 22px;
+  padding-top: 27px;
   padding-left: 25px;
 }
 
 article .slider-title div:first-child {
   color: #fff;
   font-size: 36px;
-  line-height: 30px;
+  line-height: 0.83;
+  font-family: Cuprum;
   margin-bottom: 5px;
 }
 
 article .slider-title div:last-child {
   color: #fff;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.33;
+  font-family: Cuprum;
+}
+
+.slider-btn {
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.slider-btn span {
+  font-size: 45px;
+  line-height: 0.4;
+  color: #fff;
 }
 
 .slider-btn-prev {
   position: absolute;
-  left: 25px;
-  top: 114px;
+  left: -1px;
+  top: 113px;
 }
 
 .slider-btn-next {
   position: absolute;
-  right: 25px;
-  top: 114px;
+  right: -6px;
+  top: 113px;
 }
 
 .btn-main {
