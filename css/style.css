@@ -23,6 +23,62 @@
   src: url("../fonts/PTSansBold.ttf");
 }
 
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-technomart";
+  src: url("../fonts/symbols-technomart.woff") format("woff"),
+       url("../fonts/symbols-technomart.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-technomart";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-left::before { content: "\3c"; } /* "&lt;" */
+.icon-right::before { content: "\3e"; } /* "&gt;" */
+.icon-basket::before { content: "\62"; } /* "b" */
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-vk::before { content: "\76"; } /* "v" */
+.icon-up::before { content: "\2c4"; } /* "˄" */
+.icon-down::before { content: "\2c5"; } /* "˅" */
+.icon-left-big::before { content: "\2190"; } /* "←" */
+.icon-right-big::before { content: "\2192"; } /* "→" */
+.icon-login::before { content: "\2386"; } /* "⎆" */
+.icon-logout::before { content: "\241b"; } /* "␛" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-circle::before { content: "\25cb"; } /* "○" */
+.icon-circle-dot::before { content: "\25cf"; } /* "●" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
+.icon-home::before { content: "🏠"; } /* "\1f3e0" */
+.icon-user::before { content: "👨"; } /* "\1f468" */
+.icon-phone::before { content: "📞"; } /* "\1f4de" */
+.icon-instagramm::before { content: "📷"; } /* "\1f4f7" */
+.icon-search::before { content: "🔍"; } /* "\1f50d" */
+.icon-bookmark::before { content: "🔖"; } /* "\1f516" */
+
+
 body {
   font-size: 13px;
   line-height: 24px;
@@ -40,10 +96,10 @@ h1 {
 
 h2 {
   font-size: 17px;
-  line-height: 30px;
+  line-height: 1.76;
   color: #000;
-  font-weight: bold;
   font-family: "PT Sans Bold";
+  margin: 0;
 }
 
 .uppercase {
@@ -71,13 +127,12 @@ h2 {
 body a {
   text-decoration: none;
 }
-
-.order-section > * > * {
-  display: inline-block;
-}
-
+/*Начало стилей для блока order-section*/
 .order-section {
   background: #293449;
+  font-family: Cuprum;
+  font-size: 17px;
+  line-height: 1;
   color: #fff;
 }
 
@@ -93,88 +148,448 @@ body a {
 
 .header-logo {
   padding-top: 11px;
-  padding-bottom: 9px;
+  padding-bottom: 5px;
   font-size: 24px;
   line-height: 24px;
 }
 
-.order-section .logo {
-  margin-right: 15px;
+.search {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  margin-left: -4px;
+  width: 270px;
+  vertical-align: top;
 }
 
-.search {
-  margin-right: 25px;
+.search button {
+  position: absolute;
+  top: 11px;
+  left: 6px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.search:hover button {
+  opacity: 1;
+}
+
+.search label {
+  display: none;
+  position: relative;
+}
+
+.search input {
+  border: none;
+  box-sizing: border-box;
+  width: 270px;
+  color: #fff;
+  padding-left: 47px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #293449;
+}
+
+.search input:focus {
+  background-color: #fff;
+  color: #000;
+  outline: none;
+}
+
+.search input:focus + button {
+  color: #ee3643;
+  opacity: 1;
+}
+
+.search ::-webkit-input-placeholder {
+   color: #fff;
+   opacity: 1;
 }
 
 .tab {
-  margin-right: 30px;
-}
-
-.order-section .container > a {
-  float: right;
-  width: 150px;
-  text-align: center;
-}
-
-.user-section > * > * {
   display: inline-block;
+  margin-left: -4px;
+  width: 146px;
+  vertical-align: top;
+}
+
+.tab a {
+  position: relative;
+  display: inline-block;
+  padding-left: 43px;
+  padding-top: 12px;
+  padding-bottom: 11.34px;
+  color: #fff;
+  padding-right: 28px;
+}
+
+.tab a::before {
+  content: "\1f516";
+  position: absolute;
+  left: 18px;
+  font-family: "symbols-technomart";
+  font-size: 17px;
+  line-height: 1.05;
+  opacity: 0.3;
+}
+
+.tab a:hover::before {
+  opacity: 1;
+}
+
+.tab a:active {
+  background-color: #161d29;
+  opacity: 0.3;
+}
+
+.tab a span {
+  padding-left: 4px;
+}
+
+.basket {
+  display: inline-block;
+  margin-left: -2px;
+  width: 151px;
+  vertical-align: top;
+}
+
+.basket.basket-active {
+  background-color: #ee3643;
+}
+
+.basket a {
+  position: relative;
+  display: inline-block;
+  padding-left: 48px;
+  padding-top: 12px;
+  padding-bottom: 11.34px;
+  padding-right: 29px;
+  color: #fff;
+}
+
+.basket a span {
+  padding-left: 4px;
+}
+
+.basket a::before {
+  content: "\62";
+  position: absolute;
+  left: 18px;
+  font-family: "symbols-technomart";
+  font-size: 17px;
+  line-height: 1.05;
+  opacity: 0.3;
+}
+
+.basket a:hover::before {
+  opacity: 1;
+}
+
+.basket a:active {
+  background-color: #161d29;
+  opacity: 0.3;
+}
+
+.counter-active a {
+  background-color: #ee3643;
+}
+
+.order-btn {
+  float: right;
+  display: block;
+  padding: 11px 22px 11px 20px;
+  text-align: center;
+  font-family: Cuprum;
+  font-size: 17px;
+  line-height: 1.08;
+  color: #fff;
+  background-color: #63a63e;
+}
+/*Конец стилей для блока order-section*/
+
+/*Начало стилей для блока user-section*/
+.user-section .container > * {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .user-section {
-  padding-top: 45px;
+  padding-top: 46px;
   padding-bottom: 65px;
   background: #f1f5f7;
+  font-size: 0;
+  font-family: Cuprum;
 }
 
-.user-section > * > p {
+.user-section p {
   margin-left: 53px;
   margin-right: 71px;
+  margin-top: 0;
+  font-family: "Cuprum Italic";
+  font-size: 16px;
+  line-height: 1.4375;
+  color: #ee3643;
 }
 
 .contact-info {
   width: 270px;
-  margin-right: 67px;
+  margin-right: 49px;
 }
 
 .contact-info span:first-child {
   display: block;
+  position: relative;
+  box-sizing: border-box;
   text-align: center;
+  font-size: 21px;
+  line-height: 0.85;
+  color: #e9292a;
+  padding: 11px 30px 11px 49px;
+  border: 3px solid #fff;
+}
+
+.contact-info span:first-child::before {
+  content: "\1f4de";
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  font-family: "symbols-technomart";
+  font-size: 22px;
+  line-height: 0.9;
+  color: #b7bfc8;
+}
+
+.contact-info span:last-child {
+  display: block;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #32425c;
+  margin-top: 4px;
+  margin-left: 10px;
 }
 
 .user {
-  width: 281px;
+  width: 300px;
+  font-size: 21px;
+  line-height: 0.85;
 }
 
 .btn-user {
   display: inline-block;
   background: #ffffff;
-  padding: 12px 25px;
+  padding: 14px 23px;
+  color: #000;
 }
 
-.btn-user:first-child {
+.user a:hover {
+  color: #ee3643;
+}
+
+.btn-user-enter {
+  position: relative;
   float: left;
+  padding-left: 50px;
+  margin-left: 17px;
 }
 
-.btn-user:last-child {
+.btn-user-enter::before {
+  content: "\2386";
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  font-family: "symbols-technomart";
+  font-size: 22px;
+  line-height: 0.9;
+  color: #32425c;
+  opacity: 0.3;
+}
+
+.btn-user-enter:hover::before {
+  opacity: 1;
+}
+
+.btn-user-reg {
   float: right;
+}
+
+.btn-user-main {
+  position: relative;
+  display: block;
+  padding-left: 47px;
+  margin-bottom: 9px;
+}
+
+.btn-user-main::before {
+  position: absolute;
+  content: "\1f468";
+  top: 14px;
+  left: 12px;
+  font-family: "symbols-technomart";
+  font-size: 18px;
+  line-height: 1;
+  color: #32425c;
+  opacity: 0.3;
+}
+
+.btn-user-main:hover::before {
+  opacity: 1;
+}
+
+.btn-user-main::after {
+  position: absolute;
+  content: "\241b";
+  top: 12px;
+  right: 12px;
+  font-family: "symbols-technomart";
+  font-size: 22px;
+  line-height: 1.22;
+  color: #32425c;
+  opacity: 0.3;
+}
+
+.btn-user-main:hover::after {
+  opacity: 1;
+}
+
+
+
+.user-link {
+  font-size: 16px;
+  line-height: 1.125;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user .user-link:nth-child(2) {
+  margin-left: 18px;
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #32425c;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 9px;
 }
 
 .main-navigation {
   display: block;
-  margin-top: 40px;
+  margin-top: 48px;
+}
+
+.main-navigation ul {
+  padding: 0;
 }
 
 .main-navigation ul li {
   display: inline-block;
-  padding: 18px 6px 22px;
   font-size: 17px;
-  text-align: center;
+  line-height: 1;
+}
+
+.main-navigation ul a {
+  color: #fff;
+  background-color: #32425c;
+  padding: 21px 30px 18px 30px;
+  box-shadow: inset 0 -5px #293449;
+}
+
+.main-navigation ul a:hover {
+  background-color: #293449;
+}
+
+.main-navigation ul a:active {
+  background-color: #1d2739;
+  color: #a8abaf;
+  box-shadow: inset 0 -5px #1d2739;
+}
+
+.main-navigation li:first-child a {
+  padding-left: 52px;
+}
+
+.main-navigation li:last-child a {
+  padding-right: 60px;
+}
+/*Конец стилей для блока user-section*/
+ul.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  margin-bottom: 13px;
+}
+
+ul.breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 1.386;
+  padding-left: 37px;
+  font-weight: bold;
+}
+
+ul.breadcrumbs li a {
+  color: #000;
+}
+
+ul.breadcrumbs li a:hover {
+  color: #ee3643;
+}
+
+ul.breadcrumbs a:hover span {
+  color: #ee3643;
+}
+
+ul.breadcrumbs li:first-child {
+  font-size: 0;
+  padding-left: 0;
+  margin-left: -5px;
+}
+
+ul.breadcrumbs a span {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #c1c6ce;
+}
+
+ul.breadcrumbs li:nth-child(n+1)::before {
+  position: absolute;
+  content: "\3e";
+  left: 11px;
+  width: 5px;
+  height: 5px;
+  font-family: "symbols-technomart";
+  color: #c1c6ce;
+}
+
+ul.breadcrumbs li:nth-child(3) {
+  padding-left: 40px;
+}
+
+ul.breadcrumbs li:nth-child(3)::before {
+  left: 18px;
+}
+
+ul.breadcrumbs li:nth-child(4) {
+  padding-left: 43px;
+}
+
+ul.breadcrumbs li:nth-child(4)::before {
+  left: 18px;
 }
 
 .main-header {
-  margin-bottom: 59px;
+  margin-bottom: 24px;
 }
-
+/*начало стилей для блока groups*/
 .groups-item {
   box-sizing: border-box;
   width: 300px;
@@ -306,6 +721,8 @@ article .slider-title div:last-child {
   bottom: 22px;
   left: 25px;
 }
+/*Конец стилей для блока groups*/
+
 
 .popular {
   margin-top: 53px;
@@ -317,6 +734,113 @@ article .slider-title div:last-child {
   padding: 25px 24px 26px 30px;
   background-color: #f7f3ec;
   margin-bottom: 20px;
+}
+
+.popular-title-catalog {
+  background-color: #f2f6f8;
+  padding: 29px 24px 28px 28px;
+  margin-bottom: 23px;
+}
+
+.catalog-header {
+  display: inline-block;
+  background-color: #f7f3ec;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  border-radius: 2px;
+  margin-bottom: 11px;
+}
+
+.catalog-header.uppercase {
+  box-sizing: border-box;
+  width: 220px;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  margin-right: 16px;
+}
+
+.catalog-header h3 {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 1.38;
+  margin: 0;
+  font-weight: bold;
+}
+
+.catalog-header ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.catalog-header ul li {
+  display: inline-block;
+  font-size: 0;
+}
+
+.catalog-header ul li:first-child {
+  margin-right: 136px;
+}
+
+.catalog-header ul li:nth-child(3) {
+  margin-left: 68px;
+}
+
+.catalog-header ul li:nth-child(4) {
+  margin-left: 61px;
+}
+
+.catalog-header ul li:nth-child(5) a,
+.catalog-header ul li:nth-child(6) a {
+  border: none;
+}
+
+.catalog-header ul li:nth-child(5) {
+  margin-left: 33px;
+}
+
+.catalog-header ul li:nth-child(6) {
+  margin-left: 0;
+}
+
+.catalog-header ul a {
+  font-size: 13px;
+  line-height: 1.38;
+  color: #d3cfc9;
+  border-bottom: 1px dotted rgba(238, 54, 67, 1);
+}
+
+
+
+.catalog-header ul span {
+  position: relative;
+  top: 4px;
+  font-size: 23px;
+  line-height: 0.86;
+}
+
+.catalog-header span.icon-down-dir {
+  left: -3px;
+}
+
+
+
+.catalog-header ul a.active-sorting {
+  border: none;
+  color: #ee3643;
+}
+
+.catalog-header ul a:hover {
+  color: #000;
+  border-bottom: 1px solid rgba(238, 54, 67, 1);
+}
+
+.popular-title-catalog h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1;
+  color: #32425c;
 }
 
 .popular-btn-main {
@@ -336,14 +860,157 @@ article .slider-title div:last-child {
   margin-bottom: 21px;
 }
 
+/*Начало стилей для catalog-filter*/
+.catalog-filter {
+  width: 220px;
+  float: left;
+}
+
+.catalog-filter h2 {
+  margin-bottom: 13px;
+}
+
+.catalog-filter .slider-range {
+  width: 220px;
+  height: 80px;
+  background-color: #f7f3ec;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.catalog-filter .catalog-filter-range span {
+  font-size: 17px;
+  line-height: 1.05;
+  padding-left: 4px;
+  padding-right: 5px;
+}
+
+.catalog-filter .catalog-filter-range input[type="text"] {
+  background-color: #f7f3ec;
+  border: none;
+  max-width: 95px;
+  min-height: 34px;
+  border-radius: 3px;
+  text-align: center;
+  font-family: "PT Sans";
+  font-size: 18px;
+  line-height: 1.05;
+}
+
+.catalog-filter hr {
+  margin: 0;
+  color: #e5e5e5;
+  opacity: 0.4;
+  margin-top: 27px;
+  margin-bottom: 16px;
+}
+
+.catalog-filter input[type="checkbox"],
+.catalog-filter input[type="radio"] {
+  display: none;
+}
+
+.catalog-filter .catalog-filter-checbox label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  padding-left: 34px;
+  margin-bottom: 21px;
+}
+
+.catalog-filter-checbox input[type="checkbox"] + label::before {
+  content: "\2610";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  font-size: 28px;
+  font-family: "symbols-technomart";
+  opacity: 0.2;
+}
+
+.catalog-filter-checbox input[type="checkbox"]:checked + label::before {
+  content: "\2611";
+}
+
+.catalog-filter hr:nth-of-type(2) {
+  margin-top: 23px;
+}
+
+.catalog-filter .catalog-filter-radio label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.42;
+  text-transform: uppercase;
+  padding-left: 34px;
+  margin-bottom: 22px;
+}
+
+.catalog-filter-radio input[type="radio"] + label::before {
+  content: "\25cb";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  font-size: 28px;
+  line-height: 0.71;
+  font-family: "symbols-technomart";
+  opacity: 0.2;
+}
+
+.catalog-filter-radio input[type="radio"]:checked + label::before {
+  content: "\25cf";
+}
+
+.catalog-filter button {
+  font-size: 13px;
+  line-height: 1.38;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fff;
+  width: 138px;
+  height: 36px;
+  border: 1px solid #e5e5e5;
+  border-radius: 1px;
+  margin-top: 59px;
+}
+/*Конец стилей для catalog-filter*/
+
+.catalog {
+  float: right;
+  width: 701px;
+  font-size: 0;
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
 .catalog-item {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
   text-align: center;
   vertical-align: top;
   border: 1px solid #e5e5e5;
-  margin-right: 20px;
+  margin-right: 19px;
   margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.new {
+  position: absolute;
+  content: "new";
+}
+
+.catalog .catalog-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .popular-goods .catalog-item {
@@ -363,7 +1030,7 @@ article .slider-title div:last-child {
 }
 
 .catalog-item figure img {
-  margin-bottom: 13px;
+  margin-bottom: 40px;
 }
 
 .catalog-item figcaption {
@@ -387,16 +1054,83 @@ article .slider-title div:last-child {
   font-size: 17px;
   line-height: 18px;
   color: #999;
-  margin-bottom: 11px;
+  margin-bottom: 8px;
   min-height: 18px;
 }
 
 .arrow-btn-main {
-  width: 121px;
+  position: relative;
+  left: -6px;
+  box-sizing: border-box;
+  width: 122px;
+  text-align: left;
+  padding: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-left: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: "PT Sans Bold";
   font-size: 17px;
   line-height: 18px;
   margin-bottom: 21px;
+}
+
+.arrow-btn-main::after {
+  content: "";
+  position: absolute;
+  border: 19px solid #ee3643;
+  top: 0;
+  right: -19px;
+  border-right-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.catalog .paginator {
+  margin-top: 28px;
+}
+
+.catalog .paginator a {
+  display: inline-block;
+  padding: 10px 15px 10px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  font-family: "PT Sans Bold";
+  font-size: 13px;
+  line-height: 1.38;
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 9px;
+}
+
+.catalog a.paginator-btn-next {
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+.catalog .paginator a.active-page {
+  background-color: #ee3643;
+  color: #fff;
+  border-color: #ee3643;
+}
+
+.catalog .paginator a:hover {
+  border-color: #bdc6ca;
+}
+
+.catalog .paginator a:active {
+  border-color: #ee3643;
+}
+
+.item-description {
+  background-color: #f2f6f8;
+  padding-top: 48px;
+  padding-bottom: 55px;
+}
+
+.item-description h1 {
+  margin-bottom: 29px;
 }
 
 .popular-manufacturer {
@@ -447,6 +1181,10 @@ article .slider-title div:last-child {
 .services .container > p {
   margin-top: 32px;
   margin-bottom: 73px;
+}
+
+.item-description {
+  clear: both;
 }
 
 #tabs-1, #tabs-2 {
@@ -607,8 +1345,8 @@ div[id^="tabs-"] {
 .footer-logo {
   font-size: 30px;
   line-height: 30px;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .footer-menu ul {
@@ -635,22 +1373,23 @@ div[id^="tabs-"] {
 }
 
 .footer-menu .container:first-child {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
 .footer-menu-main {
   float: right;
-  margin-top: 43px;
+  margin-top: 37px;
 }
 
 .footer-menu p {
   box-sizing: border-box;
   margin: 0;
   padding-left: 3px;
-  width: 380px;
+  width: 340px;
   float: left;
+  font-family: Cuprum;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.33;
 }
 
 .footer-menu-group {
@@ -662,9 +1401,65 @@ div[id^="tabs-"] {
 }
 /*Конец стилей для блока footer-menu*/
 
-/*Конец стилей для footer*/
-
-.container {
-  box-shadow: 0 0 0 3px #ff422d;
+/*Начало стилей для блока footer-general*/
+.footer-general {
+  background-color: #293449;
+  color: #fff;
+  font-family: Cuprum;
+  font-size: 16px;
+  line-height: 1.125;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
+
+.footer-general .container > section {
+  display: inline-block;
+}
+
+.footer-general a {
+  color: #ffd180;
+}
+
+.footer-general .footer-copyrights {
+  margin-right: 155px;
+}
+
+.footer-general .footer-social {
+  font-size: 0;
+  vertical-align: bottom;
+  margin-bottom: 13px;
+  margin-right: 108px;
+}
+
+.footer-general .social-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #212a3a;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 7px;
+}
+
+.footer-general .footer-social .social-btn:nth-child(2) {
+  margin-right: 6px;
+}
+
+.footer-general .social-btn span {
+  font-size: 18px;
+  line-height: 2.22;
+  color: #fff;
+}
+
+.footer-general .footer-feedback p,
+.footer-general .footer-dev p {
+  margin: 0;
+}
+
+.footer-general .footer-feedback {
+  margin-right: 47px;
+}
+/*Конец стилей для блока footer-general*/
+
+/*Конец стилей для footer*/
 
