@@ -1004,9 +1004,18 @@ article .slider-title div:last-child {
   overflow: hidden;
 }
 
-.new {
+.catalog-item.new::before {
   position: absolute;
   content: "new";
+  top: 6px;
+  right: -31px;
+  font-size: 15px;
+  width: 100px;
+  height: 25px;
+  font-family: Cuprum;
+  background-color: #ee3643;
+  color: #fff;
+  transform: rotate(45deg);
 }
 
 .catalog .catalog-item:nth-child(3n) {
