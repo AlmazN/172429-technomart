@@ -189,7 +189,7 @@ body a {
   color: #fff;
   padding-left: 47px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
   background-color: #293449;
 }
 
@@ -592,11 +592,13 @@ ul.breadcrumbs li:nth-child(4)::before {
 /*начало стилей для блока groups*/
 .groups-item {
   box-sizing: border-box;
+  position: relative;
   width: 300px;
   height: 123px;
   padding: 22px;
   margin-bottom: 20px;
   margin-left: 20px;
+  overflow: hidden;
 }
 
 .groups-item:last-child {
@@ -608,32 +610,40 @@ ul.breadcrumbs li:nth-child(4)::before {
 }
 
 .groups-item-material {
-  background-color: #f6b22d;
   float: left;
+  background: #f6b22d url(../img/groups-materials-icon.png) 83% 54% no-repeat;
 }
 
 .groups-item-tool {
-  background-color: #4aafde;
   float: left;
+  background: #4aafde url(../img/groups-tools-icon.png) 88% 54% no-repeat;
 }
 
 .groups-item-technique {
-  background-color: #cc79d1;
   float: right;
+  background: #cc79d1 url(../img/groups-technique-icon.png) 86% 54% no-repeat;
 }
 
 .groups-item-discount {
-  background-color: #85d179;
   float: right;
+  background: #85d179 url(../img/groups-discount-icon.png) 82% 54% no-repeat;
 }
 
 .groups-item-deliver {
-  background-color: #f6b22d;
   float: right;
+  background: #f6b22d url(../img/groups-deliver-icon.png) 85% 54% no-repeat;
 }
 
 .groups-item > * {
   display: block;
+}
+
+.groups-item span {
+  font-size: 24px;
+  line-height: 1.25;
+  font-family: Cuprum;
+  color: #fff;
+  margin-bottom: 13px;
 }
 
 .groups-item a {
@@ -643,8 +653,23 @@ ul.breadcrumbs li:nth-child(4)::before {
   text-align: center;
   line-height: 18px;
   font-size: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 8px;
+  font-family: Cuprum;
+  font-size: 14px;
+  line-height: 1.28;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin-left: 3px;
+}
+
+.groups-item a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.groups-item a:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slider {
@@ -1004,7 +1029,7 @@ article .slider-title div:last-child {
   overflow: hidden;
 }
 
-.catalog-item.new::before {
+.new-item::before {
   position: absolute;
   content: "new";
   top: 6px;
@@ -1017,6 +1042,22 @@ article .slider-title div:last-child {
   color: #fff;
   transform: rotate(45deg);
   z-index: 1;
+}
+
+.new-groups::before {
+  position: absolute;
+  content: "new";
+  top: 9px;
+  right: -31px;
+  font-size: 16px;
+  width: 100px;
+  height: 25px;
+  font-family: Cuprum;
+  background-color: #ee3643;
+  color: #fff;
+  transform: rotate(45deg);
+  z-index: 1;
+  text-align: center;
 }
 
 .catalog-item button {
@@ -1166,6 +1207,7 @@ article .slider-title div:last-child {
   font-size: 17px;
   line-height: 18px;
   margin-bottom: 21px;
+  box-shadow: 0 0 0 1px #ddff2d;
 }
 
 .arrow-btn-main::after {
