@@ -81,14 +81,14 @@
 
 body {
   font-size: 13px;
-  line-height: 24px;
+  line-height: 1.84;
   color: #000;
   font-family: "PT Sans";
 }
 
 h1 {
   font-size: 30px;
-  line-height: 24px;
+  line-height: 1;
   color: #000;
   font-weight: normal;
   font-family: "Cuprum";
@@ -150,7 +150,7 @@ body a {
   padding-top: 11px;
   padding-bottom: 5px;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
 }
 
 .search {
@@ -189,7 +189,7 @@ body a {
   color: #fff;
   padding-left: 47px;
   padding-top: 10px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
   background-color: #293449;
 }
 
@@ -374,7 +374,7 @@ body a {
 .user {
   width: 300px;
   font-size: 21px;
-  line-height: 0.85;
+  line-height: 1;
 }
 
 .btn-user {
@@ -402,7 +402,7 @@ body a {
   left: 17px;
   font-family: "symbols-technomart";
   font-size: 22px;
-  line-height: 0.9;
+  line-height: 1;
   color: #32425c;
   opacity: 0.3;
 }
@@ -651,13 +651,12 @@ ul.breadcrumbs li:nth-child(4)::before {
   width: 136px;
   height: 38px;
   text-align: center;
-  line-height: 18px;
+  line-height: 1.28;
   font-size: 14px;
   padding-top: 11px;
   padding-bottom: 8px;
   font-family: Cuprum;
   font-size: 14px;
-  line-height: 1.28;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
@@ -745,7 +744,7 @@ article .slider-title {
 article .slider-title div:first-child {
   color: #fff;
   font-size: 36px;
-  line-height: 0.83;
+  line-height: 1;
   font-family: Cuprum;
   margin-bottom: 5px;
 }
@@ -762,11 +761,12 @@ article .slider-title div:last-child {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .slider-btn span {
   font-size: 45px;
-  line-height: 0.4;
+  line-height: 1;
   color: #fff;
 }
 
@@ -784,7 +784,7 @@ article .slider-title div:last-child {
 
 .btn-main {
   text-align: center;
-  padding: 12px;
+  padding: 10px;
   background-color: #ee3643;
   border-radius: 2px;
   color: #fff;
@@ -792,7 +792,15 @@ article .slider-title div:last-child {
   font-family: Cuprum;
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.28;
+}
+
+.btn-main:hover {
+  background-color: #ca2c37;
+}
+
+.btn-main:active {
+  background-color: #ba2732;
 }
 
 .slider-btn-main {
@@ -806,7 +814,8 @@ article .slider-title div:last-child {
 
 
 .popular {
-  margin-top: 53px;
+  margin-top: 45px;
+  padding-bottom: 85px;
 }
 
 .popular-title {
@@ -925,7 +934,7 @@ article .slider-title div:last-child {
 }
 
 .popular-btn-main {
-  width: 253px;
+  width: 233px;
   float: right;
 }
 
@@ -934,6 +943,7 @@ article .slider-title div:last-child {
   margin: 0;
   text-transform: uppercase;
   margin-top: 10px;
+  color: #32425c;
 }
 
 .popular-goods {
@@ -1229,7 +1239,7 @@ article .slider-title div:last-child {
 .catalog-item figcaption {
   font-family: "PT Sans Bold";
   font-size: 18px;
-  line-height: 20px;
+  line-height: 1.11;
   margin-bottom: 14px;
 }
 
@@ -1241,7 +1251,7 @@ article .slider-title div:last-child {
   display: block;
   font-family: "PT Sans Bold";
   font-size: 17px;
-  line-height: 18px;
+  line-height: 1.05;
   color: #999;
   margin-bottom: 8px;
   min-height: 18px;
@@ -1261,9 +1271,8 @@ article .slider-title div:last-child {
   padding-bottom: 10px;
   font-family: "PT Sans Bold";
   font-size: 17px;
-  line-height: 18px;
+  line-height: 1.05;
   margin-bottom: 21px;
-  box-shadow: 0 0 0 1px #ddff2d;
 }
 
 .arrow-btn-main::after {
@@ -1275,6 +1284,14 @@ article .slider-title div:last-child {
   border-right-width: 0;
   border-top-color: transparent;
   border-bottom-color: transparent;
+}
+
+.arrow-btn-main:hover::after {
+  border-left-color: #ca2c37;
+}
+
+.arrow-btn-main:active::after {
+  border-left-color: #ba2732;
 }
 
 .catalog .paginator {
@@ -1346,10 +1363,6 @@ article .slider-title div:last-child {
   margin-right: 0;
 }
 
-.popular {
-  padding-bottom: 85px;
-}
-
 /*Начало стилей для блока Сервисы*/
 
 .services h1,
@@ -1370,41 +1383,66 @@ article .slider-title div:last-child {
 
 .services .container > p {
   margin-top: 32px;
-  margin-bottom: 73px;
+  margin-bottom: 53px;
 }
 
 .item-description {
   clear: both;
 }
 
-#tabs-1, #tabs-2 {
+.tabs-3, .tabs-2 {
   display: none;
 }
 
-#tabs ul, .tab-container {
+.tabs ul, .tab-container {
   display: inline-block;
   vertical-align: top;
 }
 
-#tabs ul {
-  margin-right: 80px;
+.tabs {
+  padding-top: 20px;
 }
 
-#tabs ul a {
+.tabs ul {
+  margin-right: 80px;
+  background: url(../img/tabs-border.png) 10px 0px no-repeat;
+}
+
+.tabs ul a {
   box-sizing: border-box;
   display: block;
   font-size: 21px;
-  line-height: 30px;
+  line-height: 1.42;
   font-family: "Cuprum Bold";
   color: #ffffff;
   background-color: #32425c;
-  padding: 20px 0 21px 22px;
+  padding: 10px 0 16px 22px;
   width: 240px;
+  box-shadow: inset 0 -1px #293449,
+              inset 0 1px #405069;
 }
 
-#tabs li.active-tab a {
+.tabs ul a:hover {
+  background-color: #293449;
+}
+
+.tabs ul li:nth-child(2) a {
+  padding-top: 13px;
+}
+
+.tabs ul li:nth-child(3) a {
+  padding-top: 13px;
+}
+
+.tabs li.active-tab a {
   background: #ffffff;
   color: #32425c;
+  box-shadow: none;
+}
+
+.tab-container h1 {
+  font-size: 36px;
+  line-height: 0.66;
 }
 
 div[id^="tabs-"] h1 {
@@ -1413,17 +1451,17 @@ div[id^="tabs-"] h1 {
 
 div[id^="tabs-"] p {
   font-size: 13px;
-  line-height: 24px;
+  line-height: 1.84;
   margin: 0;
   margin-top: 32px;
 }
 
 div[id^="tabs-"] {
   width: 615px;
-  height: 284px;
+  height: 278px;
 }
 
-#tabs-3 p {
+.tabs-3 p {
   margin-bottom: 30px;
 }
 
@@ -1431,15 +1469,15 @@ div[id^="tabs-"] {
   width: 195px;
 }
 
-#tabs-1 {
+.tabs-1 {
   background: url(../img/tabs-1-bg.png) 100% 50% no-repeat;
 }
 
-#tabs-2 {
+.tabs-2 {
   background: url(../img/tabs-2-bg.png) 100% 50% no-repeat;
 }
 
-#tabs-3 {
+.tabs-3 {
   background: url(../img/tabs-3-bg.png) 100% 50% no-repeat;
 }
 /*Конец стилей для блока Сервисы*/
@@ -1467,23 +1505,20 @@ div[id^="tabs-"] {
 }
 
 .about-company-description p:last-of-type {
-  margin-top: 25px;
-}
-
-.about-company-description p:last-child {
-  margin-bottom: 22px;
+  margin-top: 22px;
+  margin-bottom: 19px;
 }
 
 .about-company-description ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 36px;
+  margin-bottom: 33px;
 }
 
 .about-company-description ul li {
   padding-left: 36px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -1501,17 +1536,17 @@ div[id^="tabs-"] {
 .about-company-description ul a {
   font-family: Cuprum;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 1.11;
   color: #000;
 }
 
 .company-btn-main {
-  width: 220px;
+  width: 200px;
 }
 
 .about-company-contacts p {
-  margin-top: 33px;
-  margin-bottom: 37px;
+  margin-top: 29px;
+  margin-bottom: 32px;
 }
 
 .map {
@@ -1534,7 +1569,7 @@ div[id^="tabs-"] {
 
 .footer-logo {
   font-size: 30px;
-  line-height: 30px;
+  line-height: 1;
   padding-top: 17px;
   padding-bottom: 17px;
 }
@@ -1549,13 +1584,27 @@ div[id^="tabs-"] {
 .footer-menu ul li {
   display: inline-block;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.33;
   font-family: Cuprum;
 }
 
 .footer-menu ul a {
   color: #fff;
   padding: 0 30px;
+}
+
+.footer-menu ul a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+
+.main-footer a:hover {
+  text-decoration: underline;
+}
+
+.main-footer .footer-logo:hover {
+  text-decoration: none;
 }
 
 .footer-menu ul li:last-child a {
@@ -1631,6 +1680,10 @@ div[id^="tabs-"] {
   margin-right: 7px;
 }
 
+.footer-general .social-btn:hover {
+  background-color: #ee3643;
+}
+
 .footer-general .footer-social .social-btn:nth-child(2) {
   margin-right: 6px;
 }
@@ -1648,6 +1701,12 @@ div[id^="tabs-"] {
 
 .footer-general .footer-feedback {
   margin-right: 47px;
+}
+
+.footer-general .footer-feedback a:active,
+.footer-general .footer-dev a:active {
+  color: #ee3643;
+  text-decoration: none;
 }
 /*Конец стилей для блока footer-general*/
 
