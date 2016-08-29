@@ -106,12 +106,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.map {
-  width: 300px;
-  height: 158px;
-  background: #999;
-}
-
 .clearfix {
   content: "";
   display: table;
@@ -753,7 +747,7 @@ article .slider-title div:last-child {
   color: #fff;
   font-size: 18px;
   line-height: 1.33;
-  font-family: Cuprum;
+  font-family: "PT Sans";
 }
 
 .slider-btn {
@@ -1549,8 +1543,13 @@ div[id^="tabs-"] {
   margin-bottom: 32px;
 }
 
-.map {
+.map-picture {
+  width: 300px;
+  height: 158px;
+  background: #999;
   margin-bottom: 40px;
+  background-image: url(../img/map-bg.jpg);
+  cursor: pointer;
 }
 
 .contacts-btn-main {
@@ -1711,4 +1710,166 @@ div[id^="tabs-"] {
 /*Конец стилей для блока footer-general*/
 
 /*Конец стилей для footer*/
+
+/*Стили для write-us pop-up*/
+
+.write-us {
+  position: absolute;
+  bottom: -1970px;
+  left: 50%;
+  box-sizing: border-box;
+  width: 620px;
+  margin-left: -310px;
+  background-color: #fff;
+  color: #000;
+  border-top: 7px solid #ee3643;
+  padding-top: 44px;
+  -webkit-box-shadow: 0 20px 40px rgba(0,1,1,.75);
+  -moz-box-shadow: 0 20px 40px rgba(0,1,1,.75);
+  box-shadow: 0 20px 40px rgba(0,1,1,.75);
+  display: none;
+}
+
+.write-us-container {
+  width: 460px;
+  margin: 0 auto;
+}
+
+.write-us label {
+  display: inline-block;
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.write-us input[type="text"] {
+  box-sizing: border-box;
+  width: 220px;
+  outline: none;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+  padding-left: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.write-us input[type="text"]:focus {
+  border-color: #b2b2b2;
+}
+
+.write-us textarea {
+  box-sizing: border-box;
+  width: 460px;
+  height: 114px;
+  outline: none;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+  padding-left: 14px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 30px;
+}
+
+.write-us textarea:focus {
+  border-color: #b2b2b2;
+}
+
+.write-us ::-webkit-input-placeholder {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 1.38;
+  color: #red;
+}
+
+.write-us button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.write-us .name-wrapper,
+.write-us .e-mail-wrapper {
+  width: 220px;
+  margin-bottom: 18px;
+}
+
+.write-us .name-wrapper {
+  float: left;
+}
+
+.write-us .e-mail-wrapper {
+  float: right;
+}
+
+.write-us textarea {
+  clear: both;
+}
+
+.btn-main-pop-up {
+  width: 100%;
+}
+
+.close-pop-up {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 23px;
+  height: 23px;
+  font-size: 0;
+  background-color: transparent;
+}
+
+.close-pop-up::after,
+.close-pop-up::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 7px;
+  width: 25px;
+  height: 5px;
+  background-color: #ee3643;
+}
+
+.close-pop-up::before {
+  transform: rotate(45deg);
+}
+
+.close-pop-up::after {
+  transform: rotate(-45deg);
+}
+
+.close-pop-up:hover::before,
+.close-pop-up:hover::after {
+  background-color: #ca2c37;
+}
+
+.close-pop-up:active::before,
+.close-pop-up:active::after {
+  background-color: #ba2732;
+}
+
+
+.write-us .button-wrapper {
+  background-color: #f1f1f1;
+  padding-top: 37px;
+  padding-bottom: 37px;
+}
+
+/*Стили для map pop-up*/
+
+.map {
+  position: absolute;
+  bottom: -1825px;
+  left: 50%;
+  width: 940px;
+  height: 446px;
+  margin-left: -470px;
+  background-color: #444;
+  color: #000;
+  -webkit-box-shadow: 0 0 15px 1px rgba(35,31,32,.5);
+  -moz-box-shadow: 0 0 15px 1px rgba(35,31,32,.5);
+  box-shadow: 0 0 15px 1px rgba(35,31,32,.5);
+  display: none;
+}
 
