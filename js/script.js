@@ -79,22 +79,11 @@ var nameField = writeUsModal.querySelector("[name=name]");
 var eMail = writeUsModal.querySelector("[name=e-mail]");
 var textArea = writeUsModal.querySelector("textarea");
 var form = writeUsModal.querySelector("form");
-var storageName = localStorage.getItem("name");
-var storageMail = localStorage.getItem("email");
 
 contanctsLink.addEventListener("click", function(event) {
   event.preventDefault();
   writeUsModal.classList.add("show-modal");
   nameField.focus();
-  if (storageName) {
-    name.value = storageName;
-    eMail.focus();
-  }
-
-  if (storageMail) {
-    eMail.value = storageMail;
-    textArea.focus();
-  }
 });
 
 closeWriteUs.addEventListener("click", function(event) {
@@ -109,9 +98,6 @@ form.addEventListener("submit", function(event) {
     writeUsModal.classList.remove("modal-error");
     writeUsModal.offsetWidth = writeUsModal.offsetWidth;
     writeUsModal.classList.add("modal-error");
-  } else {
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("email", eMail.value);
   }
 });
 

@@ -521,7 +521,7 @@ body a {
 }
 
 .main-navigation li:last-child a {
-  padding-right: 60px;
+  padding-right: 58px;
 }
 /*Конец стилей для блока user-section*/
 ul.breadcrumbs {
@@ -1466,8 +1466,20 @@ article .slider-title div:last-child {
 }
 
 .tabs ul {
+  position: relative;
   margin-right: 80px;
-  background: url(../img/tabs-border.png) 10px 0px no-repeat;
+}
+
+.tabs ul::before {
+  content: "";
+  position: absolute;
+  top: -55px;
+  right: 0px;
+  width: 10px;
+  height: 272px;
+  background-color: #000;
+  background: url(../img/tabs-border.png);
+  z-index: 0;
 }
 
 .tabs input {
