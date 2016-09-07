@@ -14,7 +14,7 @@
           <form class="search" action="https://echo.htmlacademy.ru" method="get">
             <label for="search-field">Поиск:</label>
             <input type="text" name="search" id="search-field" placeholder="Поиск:">
-            <button type="submit"><span class="icon-search"></span></button>
+            <button class="search-icon" type="submit"></button>
           </form>
           <div class="tab">
             <a href="#">Закладки:<span class="tab-counter">0</span></a>
@@ -26,19 +26,22 @@
         </div>
       </section>
       <section class="user-section">
-        <div class="container">
-          <p>Интернет-магазин<br>
+        <div class="container clearfix">
+          <p class="site-describe">
+            Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта
           </p>
           <div class="contact-info">
-            <span>+7 (812) 555-05-55</span>
-            <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+            <p>+7 (812) 555-05-55</p>
+            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="user">
             <a class="btn-user btn-user-enter" href="#">Войти</a>
             <a class="btn-user btn-user-reg" href="#">Регистрация</a>
           </div>
+        </div>
+        <div class="container">
           <nav class="main-navigation">
             <ul>
               <li>
@@ -131,8 +134,8 @@
                 <img src="img/catalog-item-9000.jpg" alt="Перфоратор" width="218" height="126">
                 <figcaption>Перфоратор BOSCH<br>BFG 9000</figcaption>
               </figure>
-              <button class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</button>
-              <button class="figure-btn figure-btn-tab uppercase">В закладки</button>
+              <a href="#" class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</a>
+              <a href="#" class="figure-btn figure-btn-tab uppercase">В закладки</a>
             </div>
             <span class="line-through">32500 Р.</span>
             <a href="#" class="btn-main arrow-btn-main">25500 Р.</a>
@@ -145,8 +148,8 @@
                   BFG 3000
                 </figcaption>
               </figure>
-              <button class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</button>
-              <button class="figure-btn figure-btn-tab uppercase">В закладки</button>
+              <a href="#" class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</a>
+              <a href="#" class="figure-btn figure-btn-tab uppercase">В закладки</a>
             </div>
             <span class="line-through">22500 р.</span>
             <a href="#" class="btn-main arrow-btn-main">15500 р.</a>
@@ -159,8 +162,8 @@
                   BFG 6000
                 </figcaption>
               </figure>
-              <button class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</button>
-              <button class="figure-btn figure-btn-tab uppercase">В закладки</button>
+              <a href="#" class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</a>
+              <a href="#" class="figure-btn figure-btn-tab uppercase">В закладки</a>
             </div>
             <span class="line-through">30500 р.</span>
             <a href="#" class="btn-main arrow-btn-main">25500 р.</a>
@@ -173,8 +176,8 @@
                   BFG 2000
                 </figcaption>
               </figure>
-              <button class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</button>
-              <button class="figure-btn figure-btn-tab uppercase">В закладки</button>
+              <a href="#" class="figure-btn figure-btn-buy uppercase"><span class="icon-basket"></span>Купить</a>
+              <a href="#" class="figure-btn figure-btn-tab uppercase">В закладки</a>
             </div>
             <span class="line-through"></span>
             <a href="#" class="btn-main arrow-btn-main">12500 р.</a>
@@ -185,34 +188,34 @@
           <a class="btn-main popular-btn-main" href="#">все производители</a>
         </div>
         <div class="popular-manufacturer">
-          <div class="catalog-item">
+          <div class="catalog-item manufacturer">
             <a href="#"><img src="img/catalog-item-bosch.jpg" alt="bosch" width="126" height="37"></a>
           </div>
-          <div class="catalog-item">
-            <a href="#"><img src="img/catalog-item-makita.jpg" alt="makita" width="123" height="40"></a>
+          <div class="catalog-item manufacturer">
+            <a href="#"><img src="img/catalog-item-makita.jpg" at="makita" width="123" height="40"></a>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item manufacturer">
             <a href="#"><img src="img/catalog-item-dewalt.jpg" alt="dewalt" width="146" height="44"></a>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item manufacturer">
             <a href="#"><img src="img/catalog-item-interskol.jpg" alt="interskol" width="200" height="28"></a>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item manufacturer">
             <a href="#"><img src="img/catalog-item-hitachi.jpg" alt="hitachi" width="169" height="31"></a>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item manufacturer">
             <a href="#"><img src="img/catalog-item-lg.jpg" alt="lg" width="121" height="73"></a>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item manufacturer">
             <a href="#"><img src="img/catalog-item-aeg.jpg" alt="aeg" width="151" height="96"></a>
           </div>
-          <div class="catalog-item">
+          <div class="catalog-item manufacturer">
             <a href="#"><img src="img/catalog-item-metabo.jpg" alt="metabo" width="204" height="69"></a>
           </div>
         </div>
       </section>
       <section class="services">
-        <div class="container">
+        <div class="container services-container">
           <h1>Сервисы</h1>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! <br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
@@ -261,7 +264,7 @@
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br>
             Техномарт работает со многими транспортными компаниями:
           </p>
-          <ul>
+          <ul class="partners-list">
             <li><a href="#">Деловые линии</a></li>
             <li><a href="#">Автотрейдинг</a></li>
             <li><a href="#">ЖелДорЭкспедиция</a></li>
@@ -325,16 +328,16 @@
         </div>
       </section>
       <section class="footer-general">
-        <div class="container">
+        <div class="container clearfix">
           <section class="footer-copyrights">
             <p>© 2010–2016 Компания «Техномарт» <br>
               Все права защищены
             </p>
           </section>
           <section class="footer-social">
-            <a class="social-btn" href="#">Вконтакте<span class="icon-vk"></span></a>
-            <a class="social-btn" href="#">Facebook<span class="icon-facebook"></span></a>
-            <a class="social-btn" href="#">Instagramm<span class="icon-instagramm"></span></a>
+            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Facebook</a>
+            <a class="social-btn social-btn-instagramm" href="#">Instagramm</a>
           </section>
           <section class="footer-feedback">
             <p>Обратная связь:</p>
