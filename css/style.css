@@ -133,6 +133,7 @@ body a {
 
 .logo {
   display: inline-block;
+  vertical-align: top;
   width: 220px;
   text-align: center;
   background-color: #ee3643;
@@ -206,7 +207,7 @@ body a {
   outline: none;
 }
 
-.search input:focus + .search-icon::before {
+input:focus + .search-icon::before {
   color: #ee3643;
   opacity: 1;
 }
@@ -341,7 +342,7 @@ body a {
   margin-left: 53px;
   margin-right: 71px;
   margin-top: 0;
-  max-width: 196.34px;
+  max-width: 196.74px;
   font-family: "Cuprum Italic", Impact, fantasy;
   font-size: 16px;
   line-height: 1.4375;
@@ -364,6 +365,7 @@ body a {
   padding: 11px 30px 11px 49px;
   margin: 0;
   border: 3px solid #fff;
+  text-decoration: none;
 }
 
 .contact-info p:first-child::before {
@@ -442,9 +444,10 @@ body a {
 
 .btn-user-main {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-left: 47px;
   margin-bottom: 9px;
+  vertical-align: top;
 }
 
 .btn-user-main::before {
@@ -463,11 +466,25 @@ body a {
   opacity: 1;
 }
 
-.btn-user-main::after {
+.btn-user-main:active::before {
+  opacity: 0.3;
+}
+
+.exit-icon {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 44px;
+  height: 49px;
+  background-color: #fff;
+  margin-left: -5px;
+}
+
+.exit-icon::after {
   position: absolute;
   content: "\241b";
-  top: 12px;
-  right: 12px;
+  top: 11px;
+  right: 9px;
   font-family: "symbols-technomart";
   font-size: 22px;
   line-height: 1.22;
@@ -475,11 +492,13 @@ body a {
   opacity: 0.3;
 }
 
-.btn-user-main:hover::after {
+.exit-icon:hover::after {
   opacity: 1;
 }
 
-
+.exit-icon:active::after {
+  opacity: 0.3;
+}
 
 .user-link {
   font-size: 16px;
@@ -943,7 +962,7 @@ article .slider-title {
   line-height: 0.86;
 }
 
-.catalog-header span.icon-down-dir {
+.catalog-header .icon-down-dir {
   left: -3px;
 }
 
@@ -1768,7 +1787,7 @@ div[id^="tabs-"] {
 
 .footer-menu-group {
   float: right;
-  max-width: 556px;
+  max-width: 558px;
 }
 
 .footer-menu-group a {
