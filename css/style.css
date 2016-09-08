@@ -933,8 +933,7 @@ article .slider-title {
   margin-left: 61px;
 }
 
-.catalog-header li:nth-child(5) a,
-.catalog-header li:nth-child(6) a {
+.catalog-header .sorting-arrow {
   border: none;
 }
 
