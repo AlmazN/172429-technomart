@@ -142,6 +142,14 @@ body a {
   box-shadow: 0 4px #b52933;
 }
 
+.logo:hover {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
+}
+
 .header-logo {
   padding-top: 11px;
   padding-bottom: 5px;
@@ -215,6 +223,10 @@ input:focus + .search-icon::before {
 .search ::-webkit-input-placeholder {
    color: #fff;
    opacity: 1;
+}
+
+.counter-active a {
+  background-color: #ee3643;
 }
 
 .tab {
@@ -303,8 +315,13 @@ input:focus + .search-icon::before {
   opacity: 0.3;
 }
 
-.counter-active a {
+.counter-active a:active {
   background-color: #ee3643;
+  opacity: 1;
+}
+
+.counter-active a:active::before {
+  opacity: 0.3;
 }
 
 .order-btn {
@@ -988,6 +1005,10 @@ article .slider-title {
   border-bottom: 1px solid rgba(238, 54, 67, 1);
 }
 
+.catalog-header .sorting-arrow:hover {
+  border: none;
+}
+
 .popular-title-catalog h1 {
   margin: 0;
   font-size: 30px;
@@ -1133,6 +1154,14 @@ article .slider-title {
   content: "\2611";
 }
 
+.catalog-filter-checbox input[type="checkbox"] + label:hover::before {
+  opacity: .3;
+}
+
+.catalog-filter-checbox input[type="checkbox"]:disabled + label::before {
+  opacity: .1;
+}
+
 .catalog-filter hr:nth-of-type(2) {
   margin-top: 23px;
 }
@@ -1165,6 +1194,14 @@ article .slider-title {
   content: "\25cf";
 }
 
+.catalog-filter-radio input[type="radio"] + label:hover::before {
+  opacity: .3;
+}
+
+.catalog-filter-radio input[type="radio"]:disabled + label::before {
+  opacity: .1;
+}
+
 .catalog-filter button {
   font-size: 13px;
   line-height: 1.38;
@@ -1176,6 +1213,16 @@ article .slider-title {
   border: 1px solid #e5e5e5;
   border-radius: 1px;
   margin-top: 59px;
+  cursor: pointer;
+  outline: none;
+}
+
+.catalog-filter button:hover {
+  border-color: #bdc6ca;
+}
+
+.catalog-filter button:active {
+  border-color: #ee3643;
 }
 /*Конец стилей для catalog-filter*/
 
@@ -1255,6 +1302,11 @@ article .slider-title {
 
 .manufacturer:hover img {
   visibility: visible;
+}
+
+.manufacturer:active {
+	box-shadow: 0 4px 10px rgba(41,52,73,.5);
+  opacity: .5;
 }
 
 .catalog-item:hover .figure-btn {
@@ -1355,7 +1407,8 @@ article .slider-title {
   font-size: 18px;
   line-height: 1.11;
   margin-bottom: 14px;
-  padding: 0 10px;
+  padding: 0 30px;
+  min-height: 38px;
 }
 
 .line-through {
