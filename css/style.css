@@ -84,7 +84,7 @@ body {
   line-height: 1.84;
   color: #000;
   font-family: "PT Sans", Arial, sans-serif;
-  min-height: 960px;
+  min-width: 960px;
 }
 
 h1 {
@@ -891,6 +891,7 @@ article .slider-title {
   padding-left: 20px;
   border-radius: 2px;
   margin-bottom: 11px;
+  min-height: 32px;
 }
 
 .catalog-header.uppercase {
@@ -915,21 +916,31 @@ article .slider-title {
   list-style: none;
 }
 
+.catalog-header .sorting-wrapper {
+  display: inline-block;
+  max-width: 354.11px;
+}
+
+.catalog-header .direction-wrapper {
+  display: inline-block;
+  max-width: 67.92px;
+}
+
 .catalog-header li {
   display: inline-block;
   vertical-align: baseline;
   font-size: 0;
 }
 
-.catalog-header li:first-child {
+.catalog-header .sorting-title {
   margin-right: 136px;
 }
 
-.catalog-header li:nth-child(3) {
+.sorting-wrapper li:nth-child(2) {
   margin-left: 68px;
 }
 
-.catalog-header li:nth-child(4) {
+.sorting-wrapper li:nth-child(3) {
   margin-left: 61px;
 }
 
@@ -937,11 +948,11 @@ article .slider-title {
   border: none;
 }
 
-.catalog-header li:nth-child(5) {
+.direction-wrapper {
   margin-left: 33px;
 }
 
-.catalog-header li:nth-child(6) {
+.direction-wrapper li:last-child {
   margin-left: 0;
 }
 
@@ -1177,6 +1188,7 @@ article .slider-title {
 }
 
 .catalog-item {
+  box-sizing: border-box;
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -1187,6 +1199,7 @@ article .slider-title {
   margin-bottom: 20px;
   margin-top: 20px;
   overflow: hidden;
+  max-width: 221px;
 }
 
 .new-item::before {
@@ -1342,6 +1355,7 @@ article .slider-title {
   font-size: 18px;
   line-height: 1.11;
   margin-bottom: 14px;
+  padding: 0 10px;
 }
 
 .line-through {
@@ -1435,7 +1449,8 @@ a.paginator-btn-next {
 .item-description {
   background-color: #f2f6f8;
   padding-top: 48px;
-  padding-bottom: 55px;
+  padding-bottom: 68px;
+  clear: both;
 }
 
 .item-description h2 {
@@ -1445,6 +1460,10 @@ a.paginator-btn-next {
   color: #000;
   font-weight: normal;
   font-family: "Cuprum", Impact, fantasy;
+}
+
+.item-description p {
+  margin: 0;
 }
 
 .popular-manufacturer {
@@ -1492,10 +1511,6 @@ a.paginator-btn-next {
 .services-container > p {
   margin-top: 32px;
   margin-bottom: 53px;
-}
-
-.item-description {
-  clear: both;
 }
 
 .tabs-3, .tabs-2 {
