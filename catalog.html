@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header-catalog">
       <section class="order-section">
         <div class="container">
           <a href="index.html" class="logo header-logo uppercase">Техномарт</a>
@@ -19,8 +19,8 @@
           <div class="tab">
             <a href="#">Закладки:<span class="tab-counter">0</span></a>
           </div>
-          <div class="basket">
-            <a href="#">Корзина:<span class="basket-counter">0</span></a>
+          <div class="basket counter-active">
+            <a href="#">Корзина:<span class="basket-counter">10</span></a>
           </div>
           <a href="#" class="order-btn">Оформить заказ</a>
         </div>
@@ -38,7 +38,7 @@
           <div class="user">
             <a class="btn-user btn-user-main" href="#">Равшан Джамшутович</a>
             <a class="exit-icon" href="#"></a>
-            <a class="user-link" href="#">Мои заказы</a>
+            <a class="user-link user-link-first" href="#">Мои заказы</a>
             <span class="dot"></span>
             <a class="user-link" href="#">Личный кабинет</a>
           </div>
@@ -91,23 +91,19 @@
         <div class="popular-title-catalog">
           <h1 class="uppercase">Перфораторы</h1>
         </div>
-        <div class="catalog-header uppercase">
+        <div class="catalog-header filter-title uppercase">
           <h3>Фильтр:</h3>
         </div>
-        <div class="catalog-header">
-          <ul class="uppercase">
-            <li class="sorting-title">
-              <h3>Сортировка:</h3>
-            </li>
-            <div class="sorting-wrapper">
+        <div class="catalog-header sort-title">
+          <h3 class="sorting-title uppercase">Сортировка:</h3>
+          <ul class="main-sorting uppercase">
               <li><a class="active-sorting" href="#">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По функционалу</a></li>
-            </div>
-            <div class="direction-wrapper">
+          </ul>
+          <ul class="direction-sorting">
               <li>По возрастанию<a class="sorting-arrow active-sorting" href="#"><span class="icon-up-dir"></span></a></li>
               <li>По убыванию<a class="sorting-arrow" href="#"><span class="icon-down-dir"></span></a></li>
-            </div>
           </ul>
         </div>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
