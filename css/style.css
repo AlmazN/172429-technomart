@@ -916,7 +916,7 @@ article .slider-title {
 .filter-title {
   float: left;
   box-sizing: border-box;
-  width: 220px;
+  width: 218px;
   padding-top: 6px;
   padding-bottom: 6px;
   margin-right: 16px;
@@ -1050,7 +1050,7 @@ ul.direction-sorting {
 
 .catalog-filter .slider-range {
   position: relative;
-  width: 180px;
+  width: 178px;
   height: 41px;
   padding-right: 20px;
   padding-left: 20px;
@@ -1108,7 +1108,7 @@ ul.direction-sorting {
 .catalog-filter-range input[type="text"] {
   background-color: #f7f3ec;
   border: none;
-  max-width: 95px;
+  max-width: 93px;
   min-height: 34px;
   border-radius: 3px;
   text-align: center;
